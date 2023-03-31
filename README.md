@@ -1,0 +1,2 @@
+# slanColor
+colormap and colorlist
