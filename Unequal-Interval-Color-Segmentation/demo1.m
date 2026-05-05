@@ -1,5 +1,5 @@
 imagesc(peaks(1000)+1)
-% 随便构造一个colormap
+% Generate a colormap from RGB triplets
 CM=[0.1874    0.0771    0.2162
     0.2881    0.0832    0.3962
     0.3604    0.2090    0.6047

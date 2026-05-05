@@ -4,7 +4,7 @@ cb=colorbar;
 
 setCMapRatio([8/22,10/22,20/22],[.2,.5,.8])
 
-% 添加非等距离标签
-cb.YTick=getCBTick(gca);
-% 调节colorbar刻度长度(这句代码可删掉)
-cb.TickLength=.04;
+% Add non-equidistant / unequal-interval tick labels
+cb.YTick = getCBTick(gca);
+% Adjust colorbar tick length (this line can be deleted)
+cb.TickLength = 0.061;
