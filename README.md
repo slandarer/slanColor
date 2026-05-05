@@ -231,15 +231,15 @@ cb=colorbar;
 
 setCMapRatio([8/22,10/22,20/22],[.2,.5,.8])
 
-% 添加非等距离标签
-cb.YTick=getCBTick(gca);
-% 调节colorbar刻度长度(这句代码可删掉)
-cb.TickLength=.061;
+% Add non-equidistant / unequal-interval tick labels
+cb.YTick = getCBTick(gca);
+% Adjust colorbar tick length (this line can be deleted)
+cb.TickLength = 0.061;
 ```
-![输入图片说明](%E4%B8%8D%E7%AD%89%E8%B7%9D%E9%A2%9C%E8%89%B2%E5%88%86%E5%89%B2/demo2_2.png)
+![输入图片说明](Unequal-Interval-Color-Segmentation/demo2_2.png)
 
 ## Nature-Inspired Color Palette
 
-![输入图片说明](%E8%87%AA%E7%84%B6%E9%85%8D%E8%89%B2/cover1.png)
+![输入图片说明](Nature-Inspired-Color-Palette/cover1.png)
 
-![输入图片说明](%E8%87%AA%E7%84%B6%E9%85%8D%E8%89%B2/cover4.png)
+![输入图片说明](Nature-Inspired-Color-Palette/cover4.png)
