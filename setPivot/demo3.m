@@ -35,5 +35,4 @@ grid on
 % 调整颜色图中点位置
 setPivot(0)
 
-
 defualtAxes

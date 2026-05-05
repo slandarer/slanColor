@@ -9,6 +9,7 @@ for i=1:70
 end
 
 % 坐标区域修饰
+% Decorate the axes
 ax.YLim=[0,7];
 ax.XLim=[0,5*pi];
 ax.YTick=0:.5:5;

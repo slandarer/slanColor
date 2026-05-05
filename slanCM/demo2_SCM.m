@@ -6,6 +6,7 @@ XData=imfilter(XData,H,'replicate');
 
 imagesc(XData)
 % 使用slanCM的100号配色
+% Use colormap No. 100 from slanCM
 colormap(slanCM(100))
 hold on
 

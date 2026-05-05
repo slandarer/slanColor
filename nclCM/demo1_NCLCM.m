@@ -11,6 +11,7 @@ material dull
 view(59.1823,56.1559)
 
 % 修饰一下
+% Decorate the axes
 ax=gca;
 ax.Projection='perspective';
 ax.LineWidth=.8;

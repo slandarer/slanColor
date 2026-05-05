@@ -1,9 +1,10 @@
 % demo3
 % 需要mapping toolbox
+% Need mapping toolbox
 [N,R] = egm96geoid;
 axesm eckert4
 Z=zeros(R.RasterSize);
-geoshow(N,R,'DisplayType','surface','CData',N,'ZData',Z)
+geoshow(N,R,'DisplayType','surface','CData',N + 50,'ZData',Z)
 framem;gridm
 
 % 215 190 150
@@ -12,3 +13,4 @@ colormap(nclCM(150,20))
 cb=colorbar('southoutside');
 cb.Label.String = 'EGM96 Geoid Height in Meters';
 geoshow('landareas.shp','FaceColor',[.5,.5,.5])
+

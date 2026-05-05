@@ -1,0 +1,29 @@
+function setCMapRatio(varargin)
+if nargin==2
+    ax=gca;
+    oriRatio=varargin{1};
+    breakPnt=varargin{2};
+elseif nargin==3
+    ax=varargin{1};
+    oriRatio=varargin{2};
+    breakPnt=varargin{3};
+end
+CLimit=get(ax,'CLim');
+breakPnt=[CLimit(1),breakPnt,CLimit(2)];
+newRatio=diff(breakPnt);
+newRatio=round(newRatio./max(newRatio).*300);
+oriCMap=colormap(ax);
+CLen=size(oriCMap,1);
+
+oriRatio=[oriRatio,1];
+tempCMap=oriCMap(1:ceil(oriRatio(1).*CLen),:);
+CInd1=kron((1:size(tempCMap,1)-1)',ones(newRatio(1),1));
+newCMap=tempCMap(CInd1,:);
+CInd2=oriRatio(1).*CLen-floor(oriRatio(1).*CLen);
+CInd2=round(CInd2.*newRatio(1));
+if CInd2>eps
+    newCMap=[newCMap;repmat(tempCMap(end,:),[CInd2,1])]
+
+end
+
+end

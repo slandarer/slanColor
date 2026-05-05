@@ -8,7 +8,8 @@ b.CData=slanCM(188,length(b.XData));
 % 42 56 63 100 133 187 188
 
 % 修饰一下
-ax=gca;hold on;grid on
+% Decorate the axes
+ax=gca;hold on;grid on;
 ax.DataAspectRatio=[1,1,1];
 ax.LineWidth=1.2;
 ax.XMinorTick='on';

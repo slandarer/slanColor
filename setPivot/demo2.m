@@ -26,6 +26,6 @@ CM=[0.1874    0.0771    0.2162
 colormap(CM)
 colorbar 
 % 调整颜色图中点位置
-setPivot(0)
+setPivot(-3)
 
 defualtAxes

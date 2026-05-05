@@ -1,5 +1,7 @@
 function setPivot(varargin)
 % @author:slandarer
+% 若colorbar全黑 或出现Error while executing frame: "WebGL error: 1281"的
+% bug, 请改用setColormapPivot
 if nargin==0
     ax=gca;pivot=0;
 else
@@ -14,7 +16,14 @@ else
         ax=gca;pivot=varargin{1};
     end
 end
-CLimit=get(ax,'CLim');
+try
+    CLimit=get(ax,'CLim');
+catch
+end
+try
+    CLimit=get(ax,'ColorLimits');
+catch
+end
 % CMap=get(ax,'Colormap');
 CMap=colormap(ax);
 

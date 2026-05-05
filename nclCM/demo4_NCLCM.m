@@ -1,5 +1,6 @@
 % demo4
 % 需要mapping toolbox
+% Need mapping toolbox
 [Z,R]=readgeoraster('n39_w106_3arc_v2.dt1','OutputType','double');
 
 key.GTModelTypeGeoKey  = 2;
@@ -14,5 +15,6 @@ g=geoshow(filename,'DisplayType','mesh');
 
 
 % 190 300 363
-colormap(nclCM(15,200))
+colormap(nclCM(300,80))
+colorbar
 
