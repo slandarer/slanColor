@@ -1,4 +1,4 @@
-% demo11
+%% demo11 : Apply slanCM colormap to the contourf (Filled 2-D contour plot) object
 contourf(peaks, 30)
 colorbar
 

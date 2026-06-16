@@ -1,11 +1,9 @@
-% demo1
-surf(peaks,'EdgeColor','w','EdgeAlpha',.3)
-% 使用slanCM的彩虹配色
-% Use rainbow colormap
+%% demo1 : Apply slanCM colormap (with string name input) to the surf object
+surf(peaks, 'EdgeColor','w', 'EdgeAlpha',.3)
+
+% Use rainbow colormap (使用 slanCM 的彩虹配色)
 colormap(slanCM('rainbow'))
 
-
-% 修饰一下
 % Decorate the axes
 ax=gca;
 ax.Projection='perspective';

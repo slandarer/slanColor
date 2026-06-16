@@ -1,11 +1,11 @@
-% demo8
+%% demo8 : A [Distribution of Eigenvalues in Complex Plane] demo from : https://www.mathworks.com/help/matlab/ref/gallery.html
 rng('default')
 for i = 1:20000
-  x = -0.4 + 0.8*randi([0 1],1,18);
+  x = -0.4 + 0.8*randi([0 1], 1, 18);
   A = gallery('circul',x);
   E(:,i) = eig(A);
 end
-scatter(real(E(:)),imag(E(:)),8,'filled','CData',slanCM('twilight',length(E(:))))
+scatter(real(E(:)), imag(E(:)), 8, 'filled', 'CData',slanCM('twilight', length(E(:))))
 xlabel('Re(E)')
 ylabel('Im(E)')
 xlim([-3 3])
