@@ -1,11 +1,16 @@
 function colorList = slanCM(type, num)
-% slanCM - Get predefined colormap by name or ID
+% slanCM - Get popular professional colormap by name or ID
 %   colorList = slanCM(type) returns a colormap with default number of colors (256)
+%
 %   colorList = slanCM(type, num) returns a colormap with specified number of colors
 %
 % Input:
 %   type - colormap identifier (string name or numeric ID)
 %   num  - number of colors (default: 256)
+%
+% Output:
+%   colorList - num×3 RGB matrix with values in [0, 1], 
+%               obtained by linear interpolation from the selected colormap.
 %
 % Example:
 %   contourf(peaks, 30)
@@ -14,8 +19,8 @@ function colorList = slanCM(type, num)
 %   colormap(slanCM('romao'))      % Use 'romao' colormap by name
 %   colormap(slanCM(134))          % Use colormap No. 134 by ID
 %   colormap(slanCM(134, 20))      % Use colormap No. 134 with 20 colors
-%
-%
+
+
 % =========================================================================
 % # Citations & Acknowledgements
 %   Colormap collection：This package includes colormaps from several sources:
