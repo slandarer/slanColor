@@ -1,20 +1,19 @@
-% demo4
-% 需要mapping toolbox
-% Need mapping toolbox
-[Z,R]=readgeoraster('n39_w106_3arc_v2.dt1','OutputType','double');
+%% demo4 : nclCM with the Mapping Toolbox : Visualizing DEM data from a GeoTIFF
 
-key.GTModelTypeGeoKey  = 2;
-key.GTRasterTypeGeoKey = 2;
+% Need mapping toolbox (需要 mapping toolbox 工具箱)
+[Z, R] = readgeoraster('n39_w106_3arc_v2.dt1', 'OutputType','double');
+
+key.GTModelTypeGeoKey    = 2;
+key.GTRasterTypeGeoKey   = 2;
 key.GeographicTypeGeoKey = 4326;
 
-filename='southboulder.tif';
-geotiffwrite(filename,Z,R,'GeoKeyDirectoryTag',key)
+filename = 'southboulder.tif';
+geotiffwrite(filename, Z, R, 'GeoKeyDirectoryTag',key)
 
-usamap([39 40],[-106 -105])
-g=geoshow(filename,'DisplayType','mesh');
+usamap([39, 40], [-106, -105])
+g=geoshow(filename, 'DisplayType','mesh');
 
-
-% 190 300 363
+% try colormap Id : 190 300 363
 colormap(nclCM(300,80))
 colorbar
 

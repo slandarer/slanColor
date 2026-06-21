@@ -1,18 +1,15 @@
-% demo2
-% 需要mapping toolbox
-% Need mapping toolbox
-% 大地水准面高度数导入
+%% demo2 : nclCM with the Mapping Toolbox : Visualizing EGM96 geoid data
+
+% Need mapping toolbox (需要 mapping toolbox 工具箱)
 load geoid60c.mat
 
-% 创建某经纬度范围世界地图坐标区域
 % Create a world map coordinate region within a specified longitude and latitude range
-latlim=[-50 50];
-lonlim=[160 -30];
-ax=worldmap(latlim,lonlim);
+% (创建某经纬度范围世界地图坐标区域)
+latlim = [-50, 50];
+lonlim = [160, -30];
+ax = worldmap(latlim, lonlim);
 
-
-geoshow(ax,geoid60c,geoid60cR,'DisplayType','surface')
-% 205 190 215
-colormap(nclCM(215,20))
-% colormap(nclCM(335,100))
+geoshow(ax, geoid60c, geoid60cR, 'DisplayType','surface')
+% try colormap Id : 205 190 215
+colormap(nclCM(215, 20))
 colorbar
